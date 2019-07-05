@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function Temperature(celsius) {
+        this.celsius = celsius;
+        this.kenvin = function () {
+            return this.celsius + 273.15
+        }
+        this.fahrentheit = function () {
+            return ((9*this.celsius)/5 +32);
+        }
+        this.display = function () {
+            alert("K= "+this.kenvin()+" F= "+this.fahrentheit());
+        }
+    }
+    // let celsius;
+    // while (celsius < -278){
+    //     celsius = prompt("nhap độ c");
+    // }
+    let temperature = new Temperature(25);
+    temperature.display();
+</script>
+</body>
+</html>
